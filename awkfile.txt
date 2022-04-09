@@ -1,0 +1,14 @@
+BEGIN{
+FS=":"
+#printf "mysql -u %s -p%s", USR , PASSWORD
+}
+
+{
+INVID=$1
+CUSTNAME=$2
+INVTOTAL=$3
+#print "mysql -u $USR -p$PASSWORD  -e 
+printf("INSERT INTO %s.%s VALUES("$1",\""$2"\",\'2020-10-5\',"$3");"),DBNAME,T1
+#print $1" "$2" "$3
+}
+#(invID,custname,invdate,invtotal)
